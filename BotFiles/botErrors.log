@@ -1,0 +1,2 @@
+{"level":"error","message":"Bot login: Error [TOKEN_INVALID]: An invalid token was provided.","service":"user-service","timestamp":"2022-09-04 12:21:34 AM -0700"}
+{"level":"error","message":"Bot login: Error [DISALLOWED_INTENTS]: Privileged intent provided is not enabled or whitelisted.","service":"user-service","timestamp":"2022-09-04 12:22:29 AM -0700"}

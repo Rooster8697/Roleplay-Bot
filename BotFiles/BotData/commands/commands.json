@@ -1,0 +1,347 @@
+{
+  "command": [
+    {
+      "name": "roleplay",
+      "actions": [
+        {
+          "name": "delete command rp",
+          "category": "Message",
+          "type": "Delete Message",
+          "messageActionRows": [],
+          "varname": "${dbsVars.CommandMessage.id}",
+          "channelname": "${dbsVars.CommandChannel.id}"
+        },
+        {
+          "name": "Roleplay Everyone",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "↦｜roleplay-announcements",
+          "messagetext": "<a:blueflashinglight:909887666336727090> @everyone <a:blueflashinglight:909887666336727090>",
+          "savetovariable": "roleplayeveryone",
+          "savetovariabletype": "global"
+        },
+        {
+          "name": "Roleplay Announcement",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "↦｜roleplay-announcements",
+          "color": "6CB2F3",
+          "title": "__Roleplay Tonight__",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "7:30 EST / 6:30 CST / 4:30 PST\nIf you are attending, please use the correct reactions for your occupations so we are aware of numbers.\n\n**<:Civilian:1018981014095269940> | Civilian**\n**<:SAST:903474669422772266> | LEO and FIRE**\n**:alarm_clock: | Attending Late**\n**:x: | Not Attending**\n\nAn Awesome Director will announce when briefing is starting and when the people who RSVP will be sent an invite. See you tonight!\n\nPlease make sure you are only reacting once. Do NOT add multiple reactions.",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "roleplay",
+          "savetovariabletype": "global"
+        },
+        {
+          "name": "roleplay reactions",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "<:Civilian:1018981014095269940>": [],
+            "<:SAST:903474669422772266>": [],
+            "⏰": [],
+            "❌": []
+          },
+          "messageActionRows": [],
+          "message": "${globalVars.roleplay.id}",
+          "duration": "0",
+          "reactionemoji": "reactionemoji",
+          "reactionuser": "reactionuser",
+          "react": "BOOL_TRUE@@"
+        }
+      ]
+    },
+    {
+      "name": "say",
+      "actions": [
+        {
+          "name": "say delete",
+          "category": "Message",
+          "type": "Delete Message",
+          "messageActionRows": [],
+          "varname": "${dbsVars.CommandMessage.id}",
+          "channelname": "${dbsVars.CommandChannel.id}"
+        },
+        {
+          "name": "say message store",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "saidmessage",
+          "vartype": "Text",
+          "savevartype": "server",
+          "param": "0"
+        },
+        {
+          "name": "bot says message",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${dbsVars.CommandAuthor.id}>: *${serverVars.saidmessage}*",
+          "savetovariable": "",
+          "savetovariabletype": "server"
+        }
+      ]
+    },
+    {
+      "name": "reminder",
+      "actions": [
+        {
+          "name": "reminder delete",
+          "category": "Message",
+          "type": "Delete Message",
+          "messageActionRows": [],
+          "varname": "${dbsVars.CommandMessage.id}",
+          "channelname": "${dbsVars.CommandChannel.id}"
+        },
+        {
+          "name": "Roleplay Everyone_1",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "↦｜roleplay-announcements",
+          "messagetext": "<a:blueflashinglight:909887666336727090> @everyone <a:blueflashinglight:909887666336727090>",
+          "savetovariable": "roleplayeveryone",
+          "savetovariabletype": "global"
+        },
+        {
+          "name": "Roleplay Announcement_1",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "↦｜roleplay-announcements",
+          "color": "6CB2F3",
+          "title": "__Roleplay Session Reminder__",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "7:30 EST / 6:30 CST / 4:30 PST\nIf you are attending, please use the correct reactions for your occupations so we are aware of numbers.\n\n**Don't forget to react to your correct department.**\n\n**Please remember if you react but do not show up you will be striked.**\n\n*Please remember we can not grow if we are not active.*\"\nPlease make sure you are only reacting once. Do NOT add multiple reactions.",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "rpstart",
+      "actions": [
+        {
+          "name": "rpstart delete",
+          "category": "Message",
+          "type": "Delete Message",
+          "messageActionRows": [],
+          "varname": "${dbsVars.CommandMessage.id}",
+          "channelname": "${dbsVars.CommandChannel.id}"
+        },
+        {
+          "name": "Roleplay Everyone_2",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "↦｜roleplay-announcements",
+          "messagetext": "<a:blueflashinglight:909887666336727090> @everyone <a:blueflashinglight:909887666336727090>",
+          "savetovariable": "roleplayeveryone",
+          "savetovariabletype": "global"
+        },
+        {
+          "name": "Roleplay Announcement_2",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "↦｜roleplay-announcements",
+          "color": "6CB2F3",
+          "title": "__Roleplay has Started!__",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "**Roleplay Has Started. AOP will be posted below. Have a good RP tonight.**\n\n**If you need a invite to the game, message the gamertag below.**\n\n*If you have any questions, comments or concerns, please contact one of our lovely staff members. Thank you.*",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "rpover",
+      "actions": [
+        {
+          "name": "rpover delete",
+          "category": "Message",
+          "type": "Delete Message",
+          "messageActionRows": [],
+          "varname": "${dbsVars.CommandMessage.id}",
+          "channelname": "${dbsVars.CommandChannel.id}"
+        },
+        {
+          "name": "Roleplay Everyone_4",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "↦｜roleplay-announcements",
+          "messagetext": "<a:blueflashinglight:909887666336727090> @everyone <a:blueflashinglight:909887666336727090>",
+          "savetovariable": "roleplayeveryone",
+          "savetovariabletype": "global"
+        },
+        {
+          "name": "Roleplay Announcement_4",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "↦｜roleplay-announcements",
+          "color": "6CB2F3",
+          "title": "__Roleplay is Now Over!__",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "**Roleplay is now over. Thank you all for a coming to RP tonight. We hope to see you all in the next RP. Have a goodnight!**\n\n*Please remember we can not grow if we are not active.*",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "briefing",
+      "actions": [
+        {
+          "name": "briefing delete",
+          "category": "Message",
+          "type": "Delete Message",
+          "messageActionRows": [],
+          "varname": "${dbsVars.CommandMessage.id}",
+          "channelname": "${dbsVars.CommandChannel.id}"
+        },
+        {
+          "name": "Roleplay Everyone_3",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "↦｜roleplay-announcements",
+          "messagetext": "<a:blueflashinglight:909887666336727090> @everyone <a:blueflashinglight:909887666336727090>",
+          "savetovariable": "roleplayeveryone",
+          "savetovariabletype": "global"
+        },
+        {
+          "name": "Roleplay Announcement_3",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "↦｜roleplay-announcements",
+          "color": "6CB2F3",
+          "title": "__Roleplay Briefing!__",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "**Roleplay Briefing has Started!**\n\n**Please start making your way to briefing, RP is starting soon.**\n\n**If you need a invite to the game, message the gamertag below.**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "links",
+      "actions": [
+        {
+          "name": "links delete",
+          "category": "Message",
+          "type": "Delete Message",
+          "messageActionRows": [],
+          "varname": "${dbsVars.CommandMessage.id}",
+          "channelname": "${dbsVars.CommandChannel.id}"
+        },
+        {
+          "name": "server links",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "↦｜『📋』important-links",
+          "color": "6CB2F3",
+          "title": "__**PRP - Important Links**__",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "__Paradise Roleplay - Important Links__\n[Community Rules & Regulations](https://docs.google.com/document/d/1ZeYSagFDBzKn1Vnm6QpE1959H4Gfa7wT9uUDBiDPDHk/edit?usp=sharing)\n\n__Roleplay Information:__\n[Our CAD](https://therocketcad.com/portal)\n[Our Bank](https://paradisebank.enjin.com)\n\n__Our Social Media:__\n[Instagram](https://www.instagram.com/officialparadiserp/)\n[Website](https://officialparadiserp.wixsite.com/paradiserp)\n[YouTube](https://www.youtube.com/channel/UCs6iH5P-D2lKl-SPMWRuaMg)\n\n__Roleplay Resources:__\n[Penal Codes](https://docs.google.com/spreadsheets/d/1MsH85tjw1XBETWCYl-FvQzmoh79VFCx8NsVvwcHOG9g/edit?usp=sharing)\n[Postal Codes](https://drive.google.com/file/d/1O5a2i4RNt0p1UbFqbs5xVbLYra_ysL_T/view)\n[10-Codes](https://docs.google.com/spreadsheets/d/1EwL7TfuL8YvhjonTK-Mt572f0S38C0nuknv_AMBFqE8/edit?usp=sharing)\n\n__Donation Information:__\n[Donor Page](https://www.patreon.com/officialparadiseroleplay?fan_landing=true&view_as=public)",
+          "thumbnail": "${dbsVars.guild.iconURL}",
+          "image": "",
+          "footer": "",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "warn",
+      "perms": [],
+      "actions": [
+        {
+          "name": "getusertowarn",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "messageActionRows": [],
+          "varname": "UserToWarn",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "GetGrundToWarn",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "ReasonToWarn",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "0"
+        },
+        {
+          "name": "WarnMessage",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FFFFFF",
+          "title": "WARNING!!!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "<@${tempVars.UserToWarn.id}> has been warned for **${tempVars.ReasonToWarn}**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    }
+  ]
+}

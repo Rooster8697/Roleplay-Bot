@@ -1,0 +1,1184 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "roleplay",
+      "guid": "6fd82822-ddad-487e-babf-9d42ae46e940",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "ff03fc29-4594-4795-be86-b4441322e7ee"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 40,
+      "y": 129
+    },
+    {
+      "type": "response",
+      "name": "delete command rp",
+      "guid": "ff03fc29-4594-4795-be86-b4441322e7ee",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "bcc65dca-145d-4c00-be73-05e30840a9e9"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6fd82822-ddad-487e-babf-9d42ae46e940"
+        }
+      ],
+      "x": 40,
+      "y": 195,
+      "rtype": "Message",
+      "rsubtype": "Delete Message",
+      "formdata": [
+        "${dbsVars.CommandMessage.id}",
+        "${dbsVars.CommandChannel.id}"
+      ],
+      "formnames": [
+        "varname",
+        "channelName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "Roleplay Everyone",
+      "guid": "bcc65dca-145d-4c00-be73-05e30840a9e9",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "roleplayeveryone",
+      "saveToVariableType": "global",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "063a4869-41cd-4297-8dff-c7bf7a13e291"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ff03fc29-4594-4795-be86-b4441322e7ee"
+        }
+      ],
+      "x": 40,
+      "y": 317,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "↦｜roleplay-announcements",
+        "<a:blueflashinglight:909887666336727090> @everyone <a:blueflashinglight:909887666336727090>",
+        "roleplayeveryone",
+        "global"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "Roleplay Announcement",
+      "guid": "063a4869-41cd-4297-8dff-c7bf7a13e291",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "roleplay",
+      "saveToVariableType": "global",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "4419d9c6-66a2-44e8-a8d0-665405cf1092"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "bcc65dca-145d-4c00-be73-05e30840a9e9"
+        }
+      ],
+      "x": 39,
+      "y": 438,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "↦｜roleplay-announcements",
+        "6CB2F3",
+        "__Roleplay Tonight__",
+        "",
+        "",
+        "",
+        "",
+        "7:30 EST / 6:30 CST / 4:30 PST\nIf you are attending, please use the correct reactions for your occupations so we are aware of numbers.\n\n**<:Civilian:1018981014095269940> | Civilian**\n**<:SAST:903474669422772266> | LEO and FIRE**\n**:alarm_clock: | Attending Late**\n**:x: | Not Attending**\n\nAn Awesome Director will announce when briefing is starting and when the people who RSVP will be sent an invite. See you tonight!\n\nPlease make sure you are only reacting once. Do NOT add multiple reactions.",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "roleplay",
+        "global"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "say",
+      "guid": "cbb8ab83-5c32-4283-a498-d4fc9553c19d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "d2c80c55-2f92-4f18-8917-28faf2353c90"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 1128,
+      "y": 120
+    },
+    {
+      "type": "response",
+      "name": "say delete",
+      "guid": "d2c80c55-2f92-4f18-8917-28faf2353c90",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "53dbb509-697e-4d74-809d-facfc8cdb45d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "cbb8ab83-5c32-4283-a498-d4fc9553c19d"
+        }
+      ],
+      "x": 1128,
+      "y": 189,
+      "rtype": "Message",
+      "rsubtype": "Delete Message",
+      "formdata": [
+        "${dbsVars.CommandMessage.id}",
+        "${dbsVars.CommandChannel.id}"
+      ],
+      "formnames": [
+        "varname",
+        "channelName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "say message store",
+      "guid": "53dbb509-697e-4d74-809d-facfc8cdb45d",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "saidmessage",
+      "saveToVariableType": "server",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "033d8a86-ef69-462d-80fe-a5247c81d318"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d2c80c55-2f92-4f18-8917-28faf2353c90"
+        }
+      ],
+      "x": 1129,
+      "y": 288,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "saidmessage",
+        "Text",
+        "server",
+        "0"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "bot says message",
+      "guid": "033d8a86-ef69-462d-80fe-a5247c81d318",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "53dbb509-697e-4d74-809d-facfc8cdb45d"
+        }
+      ],
+      "x": 1130,
+      "y": 410,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${dbsVars.CommandAuthor.id}>: *${serverVars.saidmessage}*",
+        "",
+        "server"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "reminder",
+      "guid": "e2be7d4e-7add-4457-b8e8-92db9e75bc5a",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "7e7ee657-30dd-421c-bb17-9b654dbc5662"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 222,
+      "y": 137
+    },
+    {
+      "type": "response",
+      "name": "reminder delete",
+      "guid": "7e7ee657-30dd-421c-bb17-9b654dbc5662",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "88c0fd1e-1e50-44bf-b928-b9dfd69767f4"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e2be7d4e-7add-4457-b8e8-92db9e75bc5a"
+        }
+      ],
+      "x": 227,
+      "y": 204,
+      "rtype": "Message",
+      "rsubtype": "Delete Message",
+      "formdata": [
+        "${dbsVars.CommandMessage.id}",
+        "${dbsVars.CommandChannel.id}"
+      ],
+      "formnames": [
+        "varname",
+        "channelName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "Roleplay Everyone_1",
+      "guid": "88c0fd1e-1e50-44bf-b928-b9dfd69767f4",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "78b1801f-67ca-4662-a7dc-0f8eb2f88ce0"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7e7ee657-30dd-421c-bb17-9b654dbc5662"
+        }
+      ],
+      "x": 221,
+      "y": 325,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "↦｜roleplay-announcements",
+        "<a:blueflashinglight:909887666336727090> @everyone <a:blueflashinglight:909887666336727090>",
+        "roleplayeveryone",
+        "global"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": []
+    },
+    {
+      "type": "response",
+      "name": "Roleplay Announcement_1",
+      "guid": "78b1801f-67ca-4662-a7dc-0f8eb2f88ce0",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "88c0fd1e-1e50-44bf-b928-b9dfd69767f4"
+        }
+      ],
+      "x": 222,
+      "y": 450,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "↦｜roleplay-announcements",
+        "6CB2F3",
+        "__Roleplay Session Reminder__",
+        "",
+        "",
+        "",
+        "",
+        "7:30 EST / 6:30 CST / 4:30 PST\nIf you are attending, please use the correct reactions for your occupations so we are aware of numbers.\n\n**Don't forget to react to your correct department.**\n\n**Please remember if you react but do not show up you will be striked.**\n\n*Please remember we can not grow if we are not active.*\"\nPlease make sure you are only reacting once. Do NOT add multiple reactions.",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "rpstart",
+      "guid": "c088e3cc-f60a-40bc-9266-e186b6fdd76e",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "d6372b70-8525-49ef-9c06-845a2e38d500"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 410,
+      "y": 139
+    },
+    {
+      "type": "command",
+      "name": "rpover",
+      "guid": "c87069e6-fb86-4406-ae2b-712bc17e9ebb",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "06d3eccb-99a7-409e-9342-c4bd69bc521b"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 785,
+      "y": 143
+    },
+    {
+      "type": "response",
+      "name": "rpstart delete",
+      "guid": "d6372b70-8525-49ef-9c06-845a2e38d500",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "1ac5d7d1-2b84-4b7f-af39-d4691df35511"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c088e3cc-f60a-40bc-9266-e186b6fdd76e"
+        }
+      ],
+      "x": 411,
+      "y": 206,
+      "rtype": "Message",
+      "rsubtype": "Delete Message",
+      "formdata": [
+        "${dbsVars.CommandMessage.id}",
+        "${dbsVars.CommandChannel.id}"
+      ],
+      "formnames": [
+        "varname",
+        "channelName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "rpover delete",
+      "guid": "06d3eccb-99a7-409e-9342-c4bd69bc521b",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "0e39c9f0-97ef-4b10-8e58-d8a970e4b17f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c87069e6-fb86-4406-ae2b-712bc17e9ebb"
+        }
+      ],
+      "x": 789,
+      "y": 210,
+      "rtype": "Message",
+      "rsubtype": "Delete Message",
+      "formdata": [
+        "${dbsVars.CommandMessage.id}",
+        "${dbsVars.CommandChannel.id}"
+      ],
+      "formnames": [
+        "varname",
+        "channelName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "Roleplay Announcement_2",
+      "guid": "43408eb8-07fb-4bc2-a245-50179611d2fd",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1ac5d7d1-2b84-4b7f-af39-d4691df35511"
+        }
+      ],
+      "x": 416,
+      "y": 427,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "↦｜roleplay-announcements",
+        "6CB2F3",
+        "__Roleplay has Started!__",
+        "",
+        "",
+        "",
+        "",
+        "**Roleplay Has Started. AOP will be posted below. Have a good RP tonight.**\n\n**If you need a invite to the game, message the gamertag below.**\n\n*If you have any questions, comments or concerns, please contact one of our lovely staff members. Thank you.*",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "briefing",
+      "guid": "ed98792c-4f95-4ff9-bcb2-bec3e72c9656",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "445d276d-782b-4333-a488-c4b875a085cb"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 590,
+      "y": 138
+    },
+    {
+      "type": "response",
+      "name": "briefing delete",
+      "guid": "445d276d-782b-4333-a488-c4b875a085cb",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "29b1fd75-4bfb-4996-ac6a-55d0da0cedb1"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ed98792c-4f95-4ff9-bcb2-bec3e72c9656"
+        }
+      ],
+      "x": 594,
+      "y": 208,
+      "rtype": "Message",
+      "rsubtype": "Delete Message",
+      "formdata": [
+        "${dbsVars.CommandMessage.id}",
+        "${dbsVars.CommandChannel.id}"
+      ],
+      "formnames": [
+        "varname",
+        "channelName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "Roleplay Announcement_3",
+      "guid": "f7f930c8-dbbc-4637-a1d6-ac100293f737",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "29b1fd75-4bfb-4996-ac6a-55d0da0cedb1"
+        }
+      ],
+      "x": 591,
+      "y": 431,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "↦｜roleplay-announcements",
+        "6CB2F3",
+        "__Roleplay Briefing!__",
+        "",
+        "",
+        "",
+        "",
+        "**Roleplay Briefing has Started!**\n\n**Please start making your way to briefing, RP is starting soon.**\n\n**If you need a invite to the game, message the gamertag below.**",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "Roleplay Everyone_4",
+      "guid": "0e39c9f0-97ef-4b10-8e58-d8a970e4b17f",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "7cf1c6ef-aeb6-471a-99b7-6fc51ef3fcd3"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "06d3eccb-99a7-409e-9342-c4bd69bc521b"
+        }
+      ],
+      "x": 788,
+      "y": 312,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "↦｜roleplay-announcements",
+        "<a:blueflashinglight:909887666336727090> @everyone <a:blueflashinglight:909887666336727090>",
+        "roleplayeveryone",
+        "global"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": []
+    },
+    {
+      "type": "response",
+      "name": "Roleplay Announcement_4",
+      "guid": "7cf1c6ef-aeb6-471a-99b7-6fc51ef3fcd3",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "0e39c9f0-97ef-4b10-8e58-d8a970e4b17f"
+        }
+      ],
+      "x": 791,
+      "y": 440,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "↦｜roleplay-announcements",
+        "6CB2F3",
+        "__Roleplay is Now Over!__",
+        "",
+        "",
+        "",
+        "",
+        "**Roleplay is now over. Thank you all for a coming to RP tonight. We hope to see you all in the next RP. Have a goodnight!**\n\n*Please remember we can not grow if we are not active.*",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "links",
+      "guid": "bec3a784-4b42-4506-b534-1c59bff5585a",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "5d259e84-acc9-4927-8f21-a114c7d12c15"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 1316,
+      "y": 128
+    },
+    {
+      "type": "response",
+      "name": "links delete",
+      "guid": "5d259e84-acc9-4927-8f21-a114c7d12c15",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f2a1bcde-7547-442d-a791-95928cab1711"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "bec3a784-4b42-4506-b534-1c59bff5585a"
+        }
+      ],
+      "x": 1324,
+      "y": 197,
+      "rtype": "Message",
+      "rsubtype": "Delete Message",
+      "formdata": [
+        "${dbsVars.CommandMessage.id}",
+        "${dbsVars.CommandChannel.id}"
+      ],
+      "formnames": [
+        "varname",
+        "channelName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "server links",
+      "guid": "f2a1bcde-7547-442d-a791-95928cab1711",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5d259e84-acc9-4927-8f21-a114c7d12c15"
+        }
+      ],
+      "x": 1327,
+      "y": 298,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "↦｜『📋』important-links",
+        "6CB2F3",
+        "__**PRP - Important Links**__",
+        "",
+        "",
+        "",
+        "",
+        "__Paradise Roleplay - Important Links__\n[Community Rules & Regulations](https://docs.google.com/document/d/1ZeYSagFDBzKn1Vnm6QpE1959H4Gfa7wT9uUDBiDPDHk/edit?usp=sharing)\n\n__Roleplay Information:__\n[Our CAD](https://therocketcad.com/portal)\n[Our Bank](https://paradisebank.enjin.com)\n\n__Our Social Media:__\n[Instagram](https://www.instagram.com/officialparadiserp/)\n[Website](https://officialparadiserp.wixsite.com/paradiserp)\n[YouTube](https://www.youtube.com/channel/UCs6iH5P-D2lKl-SPMWRuaMg)\n\n__Roleplay Resources:__\n[Penal Codes](https://docs.google.com/spreadsheets/d/1MsH85tjw1XBETWCYl-FvQzmoh79VFCx8NsVvwcHOG9g/edit?usp=sharing)\n[Postal Codes](https://drive.google.com/file/d/1O5a2i4RNt0p1UbFqbs5xVbLYra_ysL_T/view)\n[10-Codes](https://docs.google.com/spreadsheets/d/1EwL7TfuL8YvhjonTK-Mt572f0S38C0nuknv_AMBFqE8/edit?usp=sharing)\n\n__Donation Information:__\n[Donor Page](https://www.patreon.com/officialparadiseroleplay?fan_landing=true&view_as=public)",
+        "${dbsVars.guild.iconURL}",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "Roleplay Everyone_2",
+      "guid": "1ac5d7d1-2b84-4b7f-af39-d4691df35511",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "43408eb8-07fb-4bc2-a245-50179611d2fd"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d6372b70-8525-49ef-9c06-845a2e38d500"
+        }
+      ],
+      "x": 415,
+      "y": 304,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "↦｜roleplay-announcements",
+        "<a:blueflashinglight:909887666336727090> @everyone <a:blueflashinglight:909887666336727090>",
+        "roleplayeveryone",
+        "global"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": []
+    },
+    {
+      "type": "response",
+      "name": "Roleplay Everyone_3",
+      "guid": "29b1fd75-4bfb-4996-ac6a-55d0da0cedb1",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f7f930c8-dbbc-4637-a1d6-ac100293f737"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "445d276d-782b-4333-a488-c4b875a085cb"
+        }
+      ],
+      "x": 593,
+      "y": 305,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "↦｜roleplay-announcements",
+        "<a:blueflashinglight:909887666336727090> @everyone <a:blueflashinglight:909887666336727090>",
+        "roleplayeveryone",
+        "global"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": []
+    },
+    {
+      "type": "response",
+      "name": "roleplay reactions",
+      "guid": "4419d9c6-66a2-44e8-a8d0-665405cf1092",
+      "reactionFields": [
+        "<:Civilian:1018981014095269940>",
+        "<:SAST:903474669422772266>",
+        "⏰",
+        "❌"
+      ],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "<:Civilian:1018981014095269940>",
+          "connections": []
+        },
+        {
+          "label": "<:SAST:903474669422772266>",
+          "connections": []
+        },
+        {
+          "label": "⏰",
+          "connections": []
+        },
+        {
+          "label": "❌",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "063a4869-41cd-4297-8dff-c7bf7a13e291"
+        }
+      ],
+      "x": 40,
+      "y": 562,
+      "rtype": "Reaction",
+      "rsubtype": "Add Reaction Listener",
+      "formdata": [
+        "${globalVars.roleplay.id}",
+        "0",
+        "reactionemoji",
+        "reactionuser",
+        "BOOL_TRUE@@"
+      ],
+      "formnames": [
+        "message",
+        "duration",
+        "reactionemoji",
+        "reactionuser",
+        "react"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "warn",
+      "guid": "03abbe40-1172-4e26-a565-9e31297f8324",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "0a297a11-bfe3-4f76-863a-07078b40cfdc"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 1524,
+      "y": 132,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "getusertowarn",
+      "guid": "0a297a11-bfe3-4f76-863a-07078b40cfdc",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "895e89b7-f8ee-4232-a87d-3b443b425be3"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "03abbe40-1172-4e26-a565-9e31297f8324"
+        }
+      ],
+      "x": 1525,
+      "y": 202,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "UserToWarn",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "GetGrundToWarn",
+      "guid": "895e89b7-f8ee-4232-a87d-3b443b425be3",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "ReasonToWarn",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "6efc1f62-df09-45bb-9f7e-3f4d26d15bf8"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "0a297a11-bfe3-4f76-863a-07078b40cfdc"
+        }
+      ],
+      "x": 1527,
+      "y": 307,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "ReasonToWarn",
+        "Text",
+        "temp",
+        "0"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "WarnMessage",
+      "guid": "6efc1f62-df09-45bb-9f7e-3f4d26d15bf8",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "895e89b7-f8ee-4232-a87d-3b443b425be3"
+        }
+      ],
+      "x": 1531,
+      "y": 428,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FFFFFF",
+        "WARNING!!!",
+        "",
+        "",
+        "",
+        "",
+        "<@${tempVars.UserToWarn.id}> has been warned for **${tempVars.ReasonToWarn}**",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    }
+  ]
+}
